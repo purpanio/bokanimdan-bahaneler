@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Okan'ı Beklerken</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <a class="geri" href="index.html">bahanelere dön</a>
+
+  <div id="secim-ekrani">
+    <h1>Okan'ı Beklerken</h1>
+    <p class="alt-baslik">Karakterini seç</p>
+
+    <div id="yildiz"></div>
+    <div id="digerleri"></div>
+
+    <button id="basla" class="buton" disabled>Başla</button>
+  </div>
+
+  <div id="oyun-ekrani" class="gizli">
+    <canvas id="tuval" width="360" height="540"></canvas>
+  </div>
+
+  <script src="oyun.js"></script>
+</body>
+
+</html>

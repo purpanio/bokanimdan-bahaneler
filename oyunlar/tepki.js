@@ -153,10 +153,14 @@
   }
 
   function yorum(ms) {
-    if (ms < 200) return "OKAN BILE BU KADAR HIZLI DEGIL";
-    if (ms < 280) return "IYI";
-    if (ms < 400) return "IDARE EDER";
-    return "OKAN SEVIYESI";
+    if (ms < 110) return "BRAAAVO OOOOLMMM";
+    if (ms < 140) return "MAKARA MI?";
+    if (ms < 160) return "GRUP ORTALAMASI";
+    if (ms < 220) return "YAŞLANDIN KRAL";
+    if (ms < 300) return "UYKULU MUSUN";
+    if (ms < 420) return "OKAN SEVIYESI";
+    if (ms < 550) return "ABIN GELDI GALIBA";
+    return "KUZENIN Mi GELDI";
   }
 
   // --- Kayit ---

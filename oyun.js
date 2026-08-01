@@ -63,7 +63,6 @@ let rekor = Number(localStorage.getItem(REKOR_ANAHTARI) || 0);
 let sonZaman = 0, birikim = 0;
 
 let kus, borular, skor, oyunBitti, hazir, kusGorseli, dongu;
-let rekor = Number(localStorage.getItem("rekor-flappy") || 0);
 
 function baslat() {
     kus = { x: 96, y: 200, r: 22, hiz: 0 };

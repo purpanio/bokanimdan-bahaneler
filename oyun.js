@@ -127,8 +127,8 @@ function guncelle() {
 }
 
 function bitir() {
-  oyunBitti = true;
-  localStorage.setItem(REKOR_ANAHTARI, rekor);
+    oyunBitti = true;
+    localStorage.setItem(REKOR_ANAHTARI, rekor);
 }
 
 function ciz() {

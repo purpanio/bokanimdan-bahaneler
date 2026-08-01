@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Okan'ı Beklerken</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +18,7 @@
 
   <div id="secim-ekrani">
     <h1>Okan'ı Beklerken</h1>
-    <p class="alt-baslik">Karakterini seç</p>
+    <p class="alt-baslik">Kime tıklarsan onun oyunu</p>
 
     <div id="yildiz"></div>
     <div id="digerleri"></div>
@@ -25,10 +27,21 @@
   </div>
 
   <div id="oyun-ekrani" class="gizli">
+    <h1 id="oyun-adi"></h1>
+    <p class="alt-baslik" id="oyun-aciklama"></p>
+
     <canvas id="tuval" width="360" height="540"></canvas>
+
+    <div>
+      <button id="menuye" class="oyun-link">karakter seç</button>
+    </div>
   </div>
 
-  <script src="oyun.js"></script>
+  <!-- Oyunlar once yuklenir, kendilerini window.oyunlar icine kaydeder -->
+  <script src="oyunlar/flappy.js"></script>
+  <script src="oyunlar/tepki.js"></script>
+  <!-- Menu en son, cunku kayitli oyunlari kullanacak -->
+  <script src="menu.js"></script>
 </body>
 
 </html>

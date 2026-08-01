@@ -56,6 +56,9 @@ const BORU_GENISLIK = 62;
 const BORU_BOSLUK = 145;
 const HIZ = 2.4;
 const KARE_SURESI = 1000 / 60;
+const REKOR_ANAHTARI = "rekor-flappy";
+
+let rekor = Number(localStorage.getItem(REKOR_ANAHTARI) || 0);
 
 let sonZaman = 0, birikim = 0;
 
@@ -107,10 +110,7 @@ function guncelle() {
         if (!b.gecildi && b.x + BORU_GENISLIK < kus.x - kus.r) {
             b.gecildi = true;
             skor++;
-            if (skor > rekor) {
-        rekor = skor;
-        localStorage.setItem("rekor-flappy", rekor);
-      }
+            if (skor > rekor) rekor = skor;
         }
 
         const yatayCakisma = kus.x + kus.r > b.x && kus.x - kus.r < b.x + BORU_GENISLIK;
@@ -127,7 +127,8 @@ function guncelle() {
 }
 
 function bitir() {
-    oyunBitti = true;
+  oyunBitti = true;
+  localStorage.setItem(REKOR_ANAHTARI, rekor);
 }
 
 function ciz() {

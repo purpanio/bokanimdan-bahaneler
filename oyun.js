@@ -59,7 +59,8 @@ const KARE_SURESI = 1000 / 60;
 
 let sonZaman = 0, birikim = 0;
 
-let kus, borular, skor, rekor = 0, oyunBitti, hazir, kusGorseli, dongu;
+let kus, borular, skor, oyunBitti, hazir, kusGorseli, dongu;
+let rekor = Number(localStorage.getItem("rekor-flappy") || 0);
 
 function baslat() {
     kus = { x: 96, y: 200, r: 22, hiz: 0 };
@@ -106,7 +107,10 @@ function guncelle() {
         if (!b.gecildi && b.x + BORU_GENISLIK < kus.x - kus.r) {
             b.gecildi = true;
             skor++;
-            if (skor > rekor) rekor = skor;
+            if (skor > rekor) {
+        rekor = skor;
+        localStorage.setItem("rekor-flappy", rekor);
+      }
         }
 
         const yatayCakisma = kus.x + kus.r > b.x && kus.x - kus.r < b.x + BORU_GENISLIK;

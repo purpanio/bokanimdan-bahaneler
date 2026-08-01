@@ -7,7 +7,7 @@ const bahaneler = [
             "Odayı süpürdüm",
             "ÇOCUKLARLA VALO",
             "Anneyle sohbet",
-            "Kuzenime Gidecez",
+            "Kuzenime gidecez",
             "Düğündeyim-nişandayım"
         ];
         const jackpotBahane = "ÇOCUKLARLA VALO";
